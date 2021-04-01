@@ -1,0 +1,246 @@
+﻿
+@{
+    ViewBag.Title = "RegistroEmpresa";
+    Layout = null;
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=devise-width, initial-scale=1.0"/>
+    <title>Registro de empresa</title>
+
+    <!-- CSS -->
+    <link href="~/Content/plugins/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/style/style.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <script src="~/Content/plugins/js/jquery-3.1.1.min.js"></script>
+    <script src="~/Content/plugins/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <br /><br /><br />
+    <div class="container">
+        <div class="row">
+            <div class="divregistroempresa">
+
+                <div class="col-md-12">
+
+                    <div class="col-md-3">
+
+                        <span><label><br />Registrar empresa<br /></label></span>
+
+                    </div>
+
+                </div>
+                <br /><br /><br />
+
+                <br />
+
+                <div class="col-md-12">
+
+                    <div class="col-md-3">
+
+                        <img src="~/Content/img/img_logo/TuLogo.png" alt="Avatar" width="80" class="img-circle" previsualizar />
+                        <label for="imagen" class="input-label"><i class="fa fa-cloud-upload"></i>Subir imagen</label>
+                        <input type="file" name="imagen" id="imagen" />
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <span><label><br />Razón Social:<br /></label></span>
+                        <input type="text" name="txtrazonSocial" class="form-control" id="txtrazonSocial" />
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <span><label><br />RUT:<br /></label></span>
+                        <input type="text" name="txtrut" class="form-control" id="txtrut" />
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-12">
+
+                    <div class="col-md-3">
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <span><label><br />Email:<br /></label></span>
+                        <input type="text" name="txtemail" class="form-control" id="txtemail" />
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <span><label><br />Pais:<br /></label></span>
+                        <select class="form-control" id="slpais">
+                            <option value="value">text</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <span><label><br />Moneda:<br /></label></span>
+                        <select class="form-control" id="slmoneda">
+                            <option value="value">text</option>
+                        </select>
+                        <br />
+
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+
+                    <div class="col-md-3">
+                    </div>
+
+                    <div class="col-md-9">
+
+                        <span><label><br />Dirección:<br /></label></span>
+                        <input type="text" name="txtdireccion" class="form-control" id="txtdireccion" />
+                        <br />
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-12">
+
+                    <div class="col-md-3">
+                    </div>
+
+                    <div class="col-md-3">
+                        <span><label>¿Vende con impuesto?</label></span>
+                    </div>
+
+                    <div class="col-md-6">
+
+                        SI <input type="radio" name="txtrdsi" id="rdsi" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        NO <input type="radio" name="txtrdno" id="rdno" />
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-12">
+
+                    <br />
+
+                    <div class="col-md-3">
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <span><label><br />Tipo Impuesto:<br /></label></span>
+                        <select class="form-control" id="sltipoimpuesto">
+                            <option value="value">text</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <span><label><br />Porcentaje:<br /></label></span>
+                        <select class="form-control" id="slporcentaje">
+                            <option value="value">text</option>
+                        </select>
+                        <br />
+
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+
+                    <br />
+
+                    <div class="col-md-3"></div>
+
+                    <div class="col-md-2">
+
+                        <button type="button" class="btn btn-default" id="btnsiguiente">
+                            <img src="~/Content/img/imagenes/flecha-correcta.png" />Siguiente
+                        </button>
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <button type="button" class="btn btn-danger">Cancelar</button>
+
+                    </div>
+
+                    <br /><br /><br />
+                </div>
+            </div>
+
+            <div class="divregistrousersuperadmin" style="display:none">
+
+                <div class="col-md-12">
+
+                    <div class="col-md-3"></div>
+                    <div class="col-md-9">
+                        <span><label>Nombre administrador</label></span>
+                        <input type="text" class="form-control" id="txtusername" />
+                    </div>
+
+                </div>
+
+                <div class="col-md-12">
+                    <br />
+                    <div class="col-md-3"></div>
+                    <div class="col-md-4">
+                        <span><label>Contraseña</label></span>
+                        <input type="password" class="form-control" id="txtuseradmin" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <span><label>Confirmar contraseña</label></span>
+                        <input type="password" class="form-control" id="txtpassword" />
+                    </div>
+
+                </div>
+
+                <div class="col-md-12">
+
+                    <br />
+
+                    <div class="col-md-3"></div>
+
+                    <div class="col-md-2">
+
+                        <button type="button" class="btn btn-danger" id="btnsiguiente">
+                            <img src="~/Content/img/imagenes/flecha-izquierda.png" />Atras
+                        </button>
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <button type="button" class="btn btn-default">
+                            <img src="~/Content/img/imagenes/salvar.png" />Registrar
+                        </button>
+                        
+
+                    </div>
+
+                    <br /><br /><br />
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
